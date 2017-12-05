@@ -1,3 +1,5 @@
+*.a
+*.o
 Thumbs.db
 *.log
 *.bak
