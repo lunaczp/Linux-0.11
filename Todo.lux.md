@@ -1,5 +1,5 @@
 # Todo
 
-- qemu learning
+- ~~qemu learning~~
 - gdb cross compile
 
