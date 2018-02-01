@@ -2,6 +2,8 @@ megs: 32
 romimage: file=$BXSHARE/BIOS-bochs-latest
 #floppya: 1_44=a.img, status=inserted
 floppya: 1_44="../Image", status=inserted
+#ata0-master: type=disk, path="../hdc-0.11.img", mode=flat, cylinders=410, heads=16, spt=38
+ata0-master: type=disk, path="c.img", mode=flat, cylinders=20, heads=16, spt=63
 
 boot: floppy
 log: out.txt
