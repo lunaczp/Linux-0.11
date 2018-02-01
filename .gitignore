@@ -6,3 +6,8 @@ Thumbs.db
 *.bak
 .DS_Store
 
+#bochs log
+out.txt
+#ctag
+tags
+
