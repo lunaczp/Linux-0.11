@@ -43,7 +43,7 @@ static inline void wait_on_buffer(struct buffer_head * bh)
 		sleep_on(&bh->b_wait);
 	sti();
 }
-
+/*LuxTodo 把缓存刷盘*/
 int sys_sync(void)
 {
 	int i;

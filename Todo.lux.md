@@ -1,6 +1,8 @@
 # Todo
 
-- ~~qemu learning~~
+- file system
+- system call
 - gdb cross compile
 - hd img
+- ~~qemu learning~~
 

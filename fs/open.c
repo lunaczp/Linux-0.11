@@ -134,7 +134,7 @@ int sys_chown(const char * filename,int uid,int gid)
 	iput(inode);
 	return 0;
 }
-
+/*LuxTodo Open*/
 int sys_open(const char * filename,int flag,int mode)
 {
 	struct m_inode * inode;
