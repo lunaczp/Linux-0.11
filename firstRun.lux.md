@@ -43,6 +43,12 @@
 linux0.11识别跟文件系统的方法是写死在bootimg的。一般地是floppy，或者是硬盘的第一个分区，当然也可以是其他，规则在[linux-0.11 release note and user guild by Linus](https://github.com/lunaczp/archive_linux/commit/7aadf253807264ad5561479e2a8b9de9602f966d)里有说明。
 注意，我们使用的是硬盘的第一个分区，所以代码里写好了是0x301
 
+### Debug
+- bochs启动
+- 设定断点`0x7c00`(BIOS把booter加载到了这里)
+- 开始调试
+这样，可方便调试bootect和setup两个组件的汇编代码。当进入`main`函数后，可使用前面说的qemu+gdb调试，方便对应到c代码。
+
 ### 参考：
 - Linux 内核完全注释 17.7 制作根文件系统
 - test/firstRun
