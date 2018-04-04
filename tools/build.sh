@@ -22,6 +22,7 @@ else
 	DEFAULT_MINOR_ROOT=${root_dev:2:3}
 fi
 
+# Lux: Image内，第1个sector是bootsect(512byte)，接着4个sector是setup(4*512byte)，最后是system
 # Write bootsect (512 bytes, one sector) to stdout
 [ ! -f "$bootsect" ] && echo "there is no bootsect binary file there" && exit -1
 dd if=$bootsect bs=512 count=1 of=$IMAGE 2>&1 >/dev/null

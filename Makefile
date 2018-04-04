@@ -43,7 +43,8 @@ LIBS	=lib/lib.a
 	$(CC) $(CFLAGS) -c -o $*.o $<
 
 all:	Image	
-
+# lux 注意，这里会先对gcc生成的system （elf32可执行文件）处理(strip，remove section)。这样最终写入Image的只有.text和.data 段。
+# 处理后生成的kernel文件，开始处0x0就是.text段，且实际代码对应setup.s
 Image: boot/bootsect boot/setup tools/system
 	cp -f tools/system system.tmp
 	$(STRIP) system.tmp
